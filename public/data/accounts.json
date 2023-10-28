@@ -1,0 +1,26 @@
+[
+    {
+        "firstName": "BADIA",
+        "lastName": "SELLAM",
+        "username": "admin",
+        "password": "12345",
+        "email": "test@gmail.com",
+        "id": 1688408926
+    },
+    {
+        "firstName": "test",
+        "lastName": "test",
+        "username": "test",
+        "password": "123456",
+        "email": "test@gmail.com",
+        "id": 1688411355
+    },
+    {
+        "firstName": "M\u00e9lanie",
+        "lastName": "Baril",
+        "username": "layLow",
+        "password": "layLow",
+        "email": "being.melb@gmail.com",
+        "id": 1688414178
+    }
+]

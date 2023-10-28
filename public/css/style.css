@@ -1,0 +1,252 @@
+/* theme */
+:root {
+    --font-family: 'Open Sans', sans-serif;
+    --primary:rgb(62, 183, 62);
+    --dark: #2c3e50;
+    --background-light: #ecf0f1;
+    --text-color: #444;
+    --text-color-light: #fff;
+    --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    --border: 1px solid #eee;
+}
+
+
+/* reset */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: var(--font-family);
+    background-color: var(--background-light);
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+/* container */
+
+.container {
+    font-size: 1.6rem;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    color: var(--text-color);
+}
+
+/*text*/
+
+.text-danger {
+    color:red;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/*button*/
+
+.btn {
+    background-color: white;
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    border: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 5px;
+    box-shadow: var(--box-shadow);
+
+}
+
+.btn-primary{
+    background-color: var(--primary);
+    color: var(--text-color-light); 
+}
+
+.btn-danger{
+    background-color: var(--dark);
+    color: var(--text-color-light); 
+}
+
+.btn-small{
+    padding: 5px 10px;
+    font-size: 1.4rem;
+}
+
+
+.low-opacity{
+    opacity: 0.5;
+}
+
+/* header */
+
+header {
+    background-color: var(--primary);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--text-color-light);
+}
+
+/* footer */
+
+footer {
+    background: var(--dark);
+    display: flex;
+    flex-flow: row-reverse;
+    color: var(--text-color-light);
+    padding: 1.5rem;
+}
+
+/* content  */
+
+.content {
+
+    max-width: 100rem;
+
+    width: 100%;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-flow: row;
+
+    align-self: center;
+
+    justify-content: center;
+
+    align-items: center;
+
+    align-self: center;
+
+    padding: 2rem 0;
+
+
+
+
+    align-items: flex-start;
+
+    justify-content: flex-start;
+
+    height: 100%;
+
+}
+/* todo */
+
+.todo-container {
+    padding: 1.5rem;
+    background-color: white;
+    border: var(--border);
+    border-radius: 3px;
+    min-width: 60rem;
+    min-height: 40rem;
+    box-shadow: var(--box-shadow);
+}
+
+.todo-container h1 {
+    text-align: center;
+}
+
+.todo-form {
+    /*Cette propriété spécifie que les éléments à l'intérieur de la classe 
+    seront affichés en tant que conteneur de boîte flexible (flexbox). */
+    display: flex;
+    /*Les éléments flexibles sont forcés de rester sur une seule ligne horizontalement*/
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.todo-form input {
+    /*Le champ se positionne sur tout l'espace disponible*/
+    flex: 1rem;
+    margin-right: 0.5rem;
+    border: var(--border);
+    border-radius: 3px;
+    padding: 10px 15px;
+}
+
+.todo-item{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 1.5rem;
+}
+
+.todo-name{
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+/* .todo-item :nth-child(odd){
+    background-color: var(--background-light);
+} */
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header{
+    background-color: var(--primary);
+    padding: 1.5rem;
+    box-shadow:  var(--box-shadow);
+}
+
+.header-menu {
+    margin: 0;
+    color: black;
+}
+
+.header-menu li:hover
+.active{
+    background-color:  var(--primary-dark);
+}
+
+.header-menu li {
+    padding:5px 15px;
+}
+
+
+header {
+background-color: var (--primary);
+padding: 1.5rem;
+box-shadow: var(--box-shadow);
+color: var(--text-color-light);
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+align-items: center;
+
+
+}
+.block{
+    border-radius: 3px;
+    border: var(--border);
+    background-color: white;
+    box-shadow: var(--box-shadow);
+
+}
+
+.p-20{
+    padding: 20px;
+}

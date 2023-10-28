@@ -1,0 +1,106 @@
+Donner 20 fonctions en PHP qui permettent de manipuler les tableaux, expliquer leur fonctionnement et donner un exemple pour chacun.
+
+1- empty() : Vérifie si un tableau est vide.
+$array = [];
+if (empty($array)) {
+    echo "Le tableau est vide";
+}
+
+2- count() : Retourne le nombre d'éléments dans un tableau.
+$array = [1, 2, 3, 4, 5];
+echo count($array); // Affiche 5
+
+3- sort() : Trie un tableau par ordre croissant.
+$array = [3, 1, 2];
+sort($array);
+print_r($array); // Affiche Array ( [0] => 1 [1] => 2 [2] => 3 )
+
+4- rsort() : Trie un tableau par ordre décroissant.
+$array = [3, 1, 2];
+rsort($array);
+print_r($array); // Affiche Array ( [0] => 3 [1] => 2 [2] => 1 )
+
+5- shuffle() : Mélange aléatoirement les éléments d'un tableau.
+$array = [1, 2, 3, 4, 5];
+shuffle($array);
+print_r($array); // Affiche un ordre aléatoire des éléments
+
+6- array_pop() : Supprime et retourne le dernier élément d'un tableau.
+$array = [1, 2, 3];
+$lastElement = array_pop($array);
+echo $lastElement; // Affiche 3
+
+7- array_push() : Ajoute un ou plusieurs éléments à la fin d'un tableau.
+$array = [1, 2, 3];
+array_push($array, 4, 5);
+print_r($array); // Affiche Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 [4] => 5 )
+
+8- array_slice() : Extrait une portion d'un tableau.
+$array = [1, 2, 3, 4, 5];
+$portion = array_slice($array, 2, 2);
+print_r($portion); // Affiche Array ( [0] => 3 [1] => 4 )
+
+9- array_shift() : Supprime et retourne le premier élément d'un tableau.
+$array = [1, 2, 3];
+$firstElement = array_shift($array);
+echo $firstElement; // Affiche 1
+
+10- array_unshift() : Ajoute un ou plusieurs éléments au début d'un tableau.
+$array = [2, 3, 4];
+array_unshift($array, 1);
+print_r($array); // Affiche Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 )
+
+11- array_merge() : Fusionne plusieurs tableaux en un seul.
+$array1 = [1, 2];
+$array2 = [3, 4];
+$mergedArray = array_merge($array1, $array2);
+print_r($mergedArray); // Affiche Array ( [0] => 1 [1] => 2 [2] => 3 [3] => 4 )
+
+12- array_search() : Recherche une valeur dans un tableau et retourne sa clé.
+$array = ['a' => 1, 'b' => 2, 'c' => 3];
+$key = array_search(2, $array);
+echo $key; // Affiche b
+
+13- array_values() : Retourne un tableau contenant les valeurs d'un tableau.
+$array = ['a' => 1, 'b' => 2, 'c' => 3];
+$values = array_values($array);
+print_r($values); // Affiche Array ( [0] => 1 [1] => 2 [2] => 3 )
+
+14- array_sum() : Calcule la somme des valeurs numériques d'un tableau.
+$array = [1, 2, 3];
+$sum = array_sum($array);
+echo $sum; // Affiche 6
+
+15- array_key_exists() : Vérifie si une clé existe dans un tableau.
+$array = ['a' => 1, 'b' => 2, 'c' => 3];
+if (array_key_exists('b', $array)) {
+    echo "La clé 'b' existe dans le tableau";
+}
+
+16- array_flip() : Échange les clés et les valeurs d'un tableau.
+$array = ['a' => 1, 'b' => 2, 'c' => 3];
+$flippedArray = array_flip($array);
+print_r($flippedArray); // Affiche Array ( [1] => a [2] => b [3] => c )
+
+17- array_reverse() : Inverse l'ordre des éléments d'un tableau.
+$array = [1, 2, 3];
+$reversedArray = array_reverse($array);
+print_r($reversedArray); // Affiche Array ( [0] => 3 [1] => 2 [2] => 1 )
+
+18- in_array() : Vérifie si une valeur existe dans un tableau.
+$array = [1, 2, 3];
+if (in_array(2, $array)) {
+    echo "La valeur 2 existe dans le tableau";
+}
+
+19- array_keys() : Retourne un tableau contenant les clés d'un tableau.
+$array = ['a' => 1, 'b' => 2, 'c' => 3];
+$keys = array_keys($array);
+print_r($keys); // Affiche Array ( [0] => a [1] => b [2] => c )
+
+20- array_unique() : Supprime les doublons d'un tableau.
+$array = [1, 2, 2, 3, 3];
+$uniqueArray = array_unique($array);
+print_r($uniqueArray); // Affiche Array ( [0] => 1 [1] => 2 [3] => 3 )
+
+

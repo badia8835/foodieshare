@@ -1,0 +1,91 @@
+Expliquer la variable $_SERVER, ses champs et donner un exemple pour chacun.
+
+La variable $_SERVER est une superglobale dans PHP qui contient des informations sur le serveur et sur l'environnement d'exécution.
+Elle est disponible dans tous les scripts PHP exécutés sur le serveur.
+La variable $_SERVER est un tableau associatif qui contient plusieurs clés prédéfinies, et chaque clé représente une information spécifique sur le serveur.
+
+
+CHAMPS
+
+'SERVER_SOFTWARE' : Nom et version du serveur web en cours d'exécution.
+$serverSoftware = $_SERVER['SERVER_SOFTWARE'];
+echo "Serveur web en cours d'exécution : " . $serverSoftware;
+
+'SERVER_NAME' : Nom de l'hôte du serveur.
+$serverName = $_SERVER['SERVER_NAME'];
+echo "Nom du serveur : " . $serverName;
+
+'SERVER_ADDR' : Adresse IP du serveur.
+$serverAddress = $_SERVER['SERVER_ADDR'];
+echo "Adresse IP du serveur : " . $serverAddress;
+
+'SERVER_PORT' : Port utilisé par le serveur pour les requêtes HTTP.
+$serverPort = $_SERVER['SERVER_PORT'];
+echo "Port du serveur : " . $serverPort;
+
+'REMOTE_ADDR' : Adresse IP de l'utilisateur qui accède au script.
+$remoteAddress = $_SERVER['REMOTE_ADDR'];
+echo "Adresse IP de l'utilisateur : " . $remoteAddress;
+
+'REMOTE_PORT' : Port de l'utilisateur sur sa machine.
+$remotePort = $_SERVER['REMOTE_PORT'];
+echo "Port de l'utilisateur : " . $remotePort;
+
+'REQUEST_URI' : URI (Uniform Resource Identifier) utilisée pour accéder au script.
+$requestURI = $_SERVER['REQUEST_URI'];
+echo "URI de la requête : " . $requestURI;
+
+'REQUEST_METHOD' : Méthode HTTP utilisée pour accéder au script (GET, POST, PUT, DELETE, etc.).
+$requestMethod = $_SERVER['REQUEST_METHOD'];
+echo "Méthode de la requête : " . $requestMethod;
+
+'SCRIPT_NAME' : Chemin relatif du script par rapport à la racine du serveur.
+$scriptName = $_SERVER['SCRIPT_NAME'];
+echo "Chemin du script : " . $scriptName;
+
+'SCRIPT_FILENAME' : Chemin absolu du script sur le serveur.
+$scriptFilename = $_SERVER['SCRIPT_FILENAME'];
+echo "Chemin absolu du script : " . $scriptFilename;
+
+'PHP_SELF' : Chemin du script en cours d'exécution par rapport à la racine du serveur.
+$phpSelf = $_SERVER['PHP_SELF'];
+echo "Chemin du script en cours d'exécution : " . $phpSelf;
+
+'QUERY_STRING' : Chaîne de requête passée dans l'URL.
+$queryString = $_SERVER['QUERY_STRING'];
+echo "Chaîne de requête : " . $queryString;
+
+'HTTP_HOST' : Nom d'hôte fourni dans l'en-tête Host de la requête HTTP.
+$httpHost = $_SERVER['HTTP_HOST'];
+echo "Nom d'hôte : " . $httpHost;
+
+'HTTP_REFERER' : URL de la page précédente à partir de laquelle l'utilisateur a été redirigé vers la page en cours.
+if (isset($_SERVER['HTTP_REFERER'])) {
+    $referer = $_SERVER['HTTP_REFERER'];
+    echo "Page précédente : " . $referer;
+} else {
+    echo "Aucune page précédente trouvée.";
+}
+
+'HTTP_USER_AGENT' : Chaîne d'agent utilisateur du navigateur utilisé par l'utilisateur.
+if (isset($_SERVER['HTTP_USER_AGENT'])) {
+    $userAgent = $_SERVER['HTTP_USER_AGENT'];
+    echo "Agent utilisateur : " . $userAgent;
+} else {
+    echo "Agent utilisateur non disponible.";
+}
+
+'HTTPS' : Indique si la requête a été effectuée via une connexion sécurisée HTTPS (valeur possible : 'on' ou 'off').
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+    echo "La requête a été effectuée via une connexion HTTPS sécurisée.";
+} else {
+    echo "La requête n'a pas été effectuée via une connexion HTTPS sécurisée.";
+}
+
+'HTTP_COOKIE' : Chaîne contenant les cookies de la requête.
+if (isset($_SERVER['HTTP_COOKIE'])) {
+    $cookies = $_SERVER['HTTP_COOKIE'];
+    echo "Cookies de la requête : " . $cookies;
+} else {
+    echo "Aucun cookie trouvé dans la requête.";
+}

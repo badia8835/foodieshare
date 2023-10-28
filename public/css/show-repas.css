@@ -1,0 +1,30 @@
+.repas-cover-img{
+height: 50rem;
+width: 100%;
+background-size: cover;
+border-radius: 3px;
+margin: 3rem 1rem;
+}
+.repas-name{
+  margin: 3rem 1rem;
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.download-link {
+    display: block;
+    padding: 10px;
+    background-color: #eaeaea;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+.img-container
+{
+    height:300px;
+    width:800px;
+    text-align: center;
+    background-size: cover;
+}
+
